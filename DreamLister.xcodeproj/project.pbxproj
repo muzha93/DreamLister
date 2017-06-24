@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DD6574E7245BFD56D5C273A /* Pods_DreamLister.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77741D0BE6B13E477A0A83BD /* Pods_DreamLister.framework */; };
 		A1C2C5D01EFEBBF800C93D53 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2C5CF1EFEBBF800C93D53 /* Item.swift */; };
 		A1C2C5D21EFEBE0300C93D53 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2C5D11EFEBE0300C93D53 /* ItemType.swift */; };
 		A1C2C5D41EFEBE6500C93D53 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2C5D31EFEBE6500C93D53 /* Image.swift */; };
@@ -25,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		382097A632B8EBA1847E23CE /* Pods-DreamLister.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamLister.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamLister/Pods-DreamLister.release.xcconfig"; sourceTree = "<group>"; };
+		77741D0BE6B13E477A0A83BD /* Pods_DreamLister.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamLister.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C2C5CF1EFEBBF800C93D53 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		A1C2C5D11EFEBE0300C93D53 /* ItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
 		A1C2C5D31EFEBE6500C93D53 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -42,6 +45,7 @@
 		A1C4C1401ECA0CA200715F97 /* NSManagedObjectContext + Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext + Utilities.swift"; sourceTree = "<group>"; };
 		A1C4C1421ECA0CC300715F97 /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		A1C4C1441ECA0CD100715F97 /* Managed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Managed.swift; sourceTree = "<group>"; };
+		E5C5120771438B338068982E /* Pods-DreamLister.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamLister.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DreamLister/Pods-DreamLister.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DD6574E7245BFD56D5C273A /* Pods_DreamLister.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +84,8 @@
 			children = (
 				A1C4C1261EC9F54900715F97 /* DreamLister */,
 				A1C4C1251EC9F54900715F97 /* Products */,
+				DC1C7F52B1EE9FB37F28147A /* Pods */,
+				C1A7EB10EC20F69BEC13ED84 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +100,7 @@
 		A1C4C1261EC9F54900715F97 /* DreamLister */ = {
 			isa = PBXGroup;
 			children = (
+				A1C2C5D71EFEC9B800C93D53 /* Views */,
 				A1C4C1461ECA0CD600715F97 /* CoreData */,
 				A1C4C1271EC9F54900715F97 /* AppDelegate.swift */,
 				A1C4C1291EC9F54900715F97 /* ViewController.swift */,
@@ -106,7 +114,6 @@
 		A1C4C1461ECA0CD600715F97 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				A1C2C5D71EFEC9B800C93D53 /* Views */,
 				A1C2C5CE1EFEBBD500C93D53 /* DataModel */,
 				A1C4C13E1ECA0C8C00715F97 /* ManagedObject.swift */,
 				A1C4C1401ECA0CA200715F97 /* NSManagedObjectContext + Utilities.swift */,
@@ -118,6 +125,23 @@
 			name = CoreData;
 			sourceTree = "<group>";
 		};
+		C1A7EB10EC20F69BEC13ED84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77741D0BE6B13E477A0A83BD /* Pods_DreamLister.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC1C7F52B1EE9FB37F28147A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5C5120771438B338068982E /* Pods-DreamLister.debug.xcconfig */,
+				382097A632B8EBA1847E23CE /* Pods-DreamLister.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,9 +149,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1C4C1361EC9F54900715F97 /* Build configuration list for PBXNativeTarget "DreamLister" */;
 			buildPhases = (
+				92D083F45AD48F96A2CC2E42 /* [CP] Check Pods Manifest.lock */,
 				A1C4C1201EC9F54900715F97 /* Sources */,
 				A1C4C1211EC9F54900715F97 /* Frameworks */,
 				A1C4C1221EC9F54900715F97 /* Resources */,
+				191BBDD9B6651E460F031B46 /* [CP] Embed Pods Frameworks */,
+				01A74706F21F1B31862C3323 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,6 +210,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01A74706F21F1B31862C3323 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DreamLister/Pods-DreamLister-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		191BBDD9B6651E460F031B46 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DreamLister/Pods-DreamLister-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92D083F45AD48F96A2CC2E42 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A1C4C1201EC9F54900715F97 /* Sources */ = {
@@ -316,6 +391,7 @@
 		};
 		A1C4C1371EC9F54900715F97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5C5120771438B338068982E /* Pods-DreamLister.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DreamLister/Info.plist;
@@ -328,6 +404,7 @@
 		};
 		A1C4C1381EC9F54900715F97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 382097A632B8EBA1847E23CE /* Pods-DreamLister.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DreamLister/Info.plist;
