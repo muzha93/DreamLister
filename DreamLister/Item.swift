@@ -31,4 +31,7 @@ extension Item: Managed {
         return [NSSortDescriptor(key: #keyPath(title), ascending: false)]
     }
     
+    static var entityName: String {
+        return "Item"
+    }
 }

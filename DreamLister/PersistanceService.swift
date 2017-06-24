@@ -57,3 +57,21 @@ final class PersistanceService {
     }
     
 }
+
+extension PersistanceService {
+    
+
+    func delete(event: Item) {
+        guard let context = event.managedObjectContext else {
+            print("context not available")
+            return
+        }
+        
+        context.perform {
+            context.delete(event)
+            let status = context.saveOrRollback()
+            print("context saved:",  status)
+        }
+    }
+}
+

@@ -23,6 +23,10 @@
 		A1C4C1411ECA0CA200715F97 /* NSManagedObjectContext + Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C4C1401ECA0CA200715F97 /* NSManagedObjectContext + Utilities.swift */; };
 		A1C4C1431ECA0CC300715F97 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C4C1421ECA0CC300715F97 /* TableViewDataSource.swift */; };
 		A1C4C1451ECA0CD100715F97 /* Managed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C4C1441ECA0CD100715F97 /* Managed.swift */; };
+		A1FE29511EFF04C900AD089F /* ItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FE29501EFF04C900AD089F /* ItemsTableViewCell.swift */; };
+		A1FE29571EFF154F00AD089F /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FE29561EFF154F00AD089F /* ItemViewModel.swift */; };
+		A1FE295A1EFF18B300AD089F /* proba.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FE29581EFF18B300AD089F /* proba.swift */; };
+		A1FE295B1EFF18B300AD089F /* proba.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1FE29591EFF18B300AD089F /* proba.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,10 @@
 		A1C4C1401ECA0CA200715F97 /* NSManagedObjectContext + Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext + Utilities.swift"; sourceTree = "<group>"; };
 		A1C4C1421ECA0CC300715F97 /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		A1C4C1441ECA0CD100715F97 /* Managed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Managed.swift; sourceTree = "<group>"; };
+		A1FE29501EFF04C900AD089F /* ItemsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsTableViewCell.swift; sourceTree = "<group>"; };
+		A1FE29561EFF154F00AD089F /* ItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
+		A1FE29581EFF18B300AD089F /* proba.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = proba.swift; sourceTree = "<group>"; };
+		A1FE29591EFF18B300AD089F /* proba.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = proba.xib; sourceTree = "<group>"; };
 		E5C5120771438B338068982E /* Pods-DreamLister.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamLister.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DreamLister/Pods-DreamLister.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,7 +82,11 @@
 		A1C2C5D71EFEC9B800C93D53 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A1FE29531EFF0ED800AD089F /* ModelView */,
+				A1FE294F1EFF046D00AD089F /* Cells */,
 				A1C2C5D81EFEC9F600C93D53 /* HomeViewController.swift */,
+				A1FE29581EFF18B300AD089F /* proba.swift */,
+				A1FE29591EFF18B300AD089F /* proba.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -115,14 +127,38 @@
 			isa = PBXGroup;
 			children = (
 				A1C2C5CE1EFEBBD500C93D53 /* DataModel */,
-				A1C4C13E1ECA0C8C00715F97 /* ManagedObject.swift */,
-				A1C4C1401ECA0CA200715F97 /* NSManagedObjectContext + Utilities.swift */,
-				A1C4C1421ECA0CC300715F97 /* TableViewDataSource.swift */,
-				A1C4C1441ECA0CD100715F97 /* Managed.swift */,
-				A1C4C13C1ECA048E00715F97 /* PersistanceService.swift */,
+				A1FE29521EFF0CA300AD089F /* CoreData Utilities */,
 				A1C4C1391ECA046800715F97 /* Model.xcdatamodeld */,
 			);
 			name = CoreData;
+			sourceTree = "<group>";
+		};
+		A1FE294F1EFF046D00AD089F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A1FE29501EFF04C900AD089F /* ItemsTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		A1FE29521EFF0CA300AD089F /* CoreData Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A1C4C13E1ECA0C8C00715F97 /* ManagedObject.swift */,
+				A1C4C1401ECA0CA200715F97 /* NSManagedObjectContext + Utilities.swift */,
+				A1C4C13C1ECA048E00715F97 /* PersistanceService.swift */,
+				A1C4C1441ECA0CD100715F97 /* Managed.swift */,
+				A1C4C1421ECA0CC300715F97 /* TableViewDataSource.swift */,
+			);
+			name = "CoreData Utilities";
+			sourceTree = "<group>";
+		};
+		A1FE29531EFF0ED800AD089F /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				A1FE29561EFF154F00AD089F /* ItemViewModel.swift */,
+			);
+			name = ModelView;
 			sourceTree = "<group>";
 		};
 		C1A7EB10EC20F69BEC13ED84 /* Frameworks */ = {
@@ -206,6 +242,7 @@
 			files = (
 				A1C4C1321EC9F54900715F97 /* LaunchScreen.storyboard in Resources */,
 				A1C4C12F1EC9F54900715F97 /* Assets.xcassets in Resources */,
+				A1FE295B1EFF18B300AD089F /* proba.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,8 +309,11 @@
 				A1C4C13F1ECA0C8C00715F97 /* ManagedObject.swift in Sources */,
 				A1C4C1281EC9F54900715F97 /* AppDelegate.swift in Sources */,
 				A1C4C1411ECA0CA200715F97 /* NSManagedObjectContext + Utilities.swift in Sources */,
+				A1FE29571EFF154F00AD089F /* ItemViewModel.swift in Sources */,
 				A1C4C1451ECA0CD100715F97 /* Managed.swift in Sources */,
+				A1FE295A1EFF18B300AD089F /* proba.swift in Sources */,
 				A1C4C1431ECA0CC300715F97 /* TableViewDataSource.swift in Sources */,
+				A1FE29511EFF04C900AD089F /* ItemsTableViewCell.swift in Sources */,
 				A1C2C5D41EFEBE6500C93D53 /* Image.swift in Sources */,
 				A1C2C5D91EFEC9F600C93D53 /* HomeViewController.swift in Sources */,
 				A1C4C13B1ECA046800715F97 /* Model.xcdatamodeld in Sources */,
@@ -393,7 +433,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E5C5120771438B338068982E /* Pods-DreamLister.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DreamLister/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = luka.DreamLister;
@@ -406,7 +446,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 382097A632B8EBA1847E23CE /* Pods-DreamLister.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DreamLister/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = luka.DreamLister;
