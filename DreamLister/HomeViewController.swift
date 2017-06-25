@@ -26,11 +26,12 @@ class HomeViewController: UIViewController {
     }
 
     private func setUpTableView(tableView: UITableView) {
-//        let tableView = UITableView()
+
         let identifier = String(describing: ItemsTableViewCell.self)
         tableView.register(ItemsTableViewCell.self, forCellReuseIdentifier: identifier)
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 44
+        tableView.rowHeight = 140
+//        tableView.rowHeight = UITableViewAutomaticDimension
+//        tableView.estimatedRowHeight = 44
         let request = Item.sortedFetchRequest
         request.fetchBatchSize = 20
         if let frc = persistanceService?.fetchController(forRequest: request) {
@@ -47,6 +48,16 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
+    }
+    
+    @objc private func saveEvent() {
+        if let persistanceService = self.persistanceService {
+            persistanceService.createItem(withTitle: "proba", created: Date(), price: 30.0, details: "details")
+            { item in
+                print("event ID:", item.title)
+            }
+        }
+        
     }
     
     private func setUpView() {
@@ -76,7 +87,7 @@ class HomeViewController: UIViewController {
         self.navigationController!.navigationBar.isTranslucent = false
         self.navigationController!.navigationBar.backgroundColor = UIColor.white
         self.navigationItem.title = "Home"
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(saveEvent))
         self.navigationItem.rightBarButtonItem = addButton
         
     }

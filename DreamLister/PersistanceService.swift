@@ -60,6 +60,24 @@ final class PersistanceService {
 
 extension PersistanceService {
     
+    func createItem(withTitle title: String,
+                     created: Date,
+                     price: Double,
+                     details: String,
+                     completion: @escaping (Item) -> ()) {
+        guard let mainContext = mainContext else {
+            fatalError("context not available")
+        }
+        
+        Item.insert(into: mainContext,
+                    title: title,
+                    created: created,
+                    price: price,
+                    details: details) { item in
+                        completion(item)
+        }
+    }
+    
 
     func delete(event: Item) {
         guard let context = event.managedObjectContext else {

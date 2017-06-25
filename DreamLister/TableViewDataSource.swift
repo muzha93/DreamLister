@@ -85,6 +85,5 @@ class TableViewDataSource<Delegate: TableViewDataSourceDelegate>: NSObject, UITa
 
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.reloadData()
-        //        tableView.endUpdates()
     }
 }

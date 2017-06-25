@@ -1,18 +1,19 @@
 //
-//  ViewController.swift
+//  ItemViewController.swift
 //  DreamLister
 //
-//  Created by luka on 15/05/2017.
+//  Created by luka on 25/06/2017.
 //  Copyright © 2017 luka. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class ItemViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +21,4 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-
